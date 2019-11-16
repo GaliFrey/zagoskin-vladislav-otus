@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CustomElems</title>
+</head>
+
+<body>
+  <div id="domtree" datetree='
+  {
+  "id": 1,
+  "items": [{
+  "id": 2,
+  "items": [{ "id": 3 }, { "id": 4 }, { "id": 5 }]
+  },{
+    "id": 7,
+    "items": [{ "id": 8 }, { "id": 9 }, { "id": 10 }]
+    }]
+  }
+  '></div>
+
+  <script>
+    // Регитстрируем компоненты
+    customElements.define('my-tree', class MyTree extends HTMLElement {
+      constructor() {
+        super();
+      }
+    })
+
+    customElements.define('my-leaf', class MyTree extends HTMLElement {
+      constructor() {
+        super();
+      }
+    })
+
+    // Создаем Шадоу Дом
+    const tree = document.getElementById('domtree');
+    tree.attachShadow({
+      mode: 'open'
+    });
+
+    // Функция построения дерева
+    function createTree(datetree) {
+      const tree = JSON.parse(datetree);
+      const fragment = new DocumentFragment;
+
+      function createTreeElem(tree, parent) {
+        let ul = document.createElement('my-tree');
+        let li = document.createElement('my-leaf');
+        li.appendChild(document.createTextNode(tree.id))
+        ul.appendChild(li);
+        parent.appendChild(ul);
+
+        if (tree.items) {
+          li.classList.add('catalog');
+
+          for (let i = 0; i < tree.items.length; i++) {
+            createTreeElem(tree.items[i], li);
+          }
+        } else {
+          li.classList.add('element');
+        }
+
+        return parent;
+      }
+
+      return createTreeElem(tree, fragment);
+    }
+
+    // Добавляем блок стилей
+    const style = document.createElement('style');
+    style.textContent = `
+                            my-tree {
+                              display: block;
+                              margin-left: 15px;
+                            }
+
+                            .catalog::before {
+                              content: '+';
+                              margin-right: 10px;
+                            }
+
+                            .element::before {
+                              content: '-';
+                              margin-right: 10px;
+                            }`
+    tree.shadowRoot.appendChild(style);
+
+    // Добавляем блок с деревом
+    const datetree = tree.getAttribute('datetree');
+    tree.shadowRoot.appendChild(this.createTree(datetree));
+  </script>
+</body>
+
+</html>
