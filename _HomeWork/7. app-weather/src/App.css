@@ -1,0 +1,66 @@
+.container {
+  width: 400px;
+}
+
+.container h3 {
+  text-align: center;
+}
+
+.container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button_container button {
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button_container button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+}
+
+.button_container button:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.city_info {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.city_info div:nth-child(1) {
+  text-align: center;
+  font-size: 18px;
+}
+
+.city_info div:not(:nth-child(1)) b {
+  display: inline-block;
+  width: 150px;
+}
+
+.city_info div:not(:nth-child(1)) span {
+  font-size: 18px;
+}
