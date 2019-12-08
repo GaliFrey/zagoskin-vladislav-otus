@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tree.js",
+  "scripts": {
+    "tree": "node tree.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
