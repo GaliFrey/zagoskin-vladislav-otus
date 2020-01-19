@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
@@ -10,14 +10,8 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <div className="container pt-4">
-        <Switch>
-          <Route exact path={'/'}>
-            <Home />
-          </Route>
-          <Route path={'/about'}>
-            <About />
-          </Route>
-        </Switch>
+          <Route exact path={'/'} component={Home} />
+          <Route path={'/cities/:key'} component={About} />
       </div>
     </BrowserRouter>
   )
