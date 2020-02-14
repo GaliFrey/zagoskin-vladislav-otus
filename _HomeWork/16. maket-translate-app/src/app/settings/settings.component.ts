@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-settings',
@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+  languages: Array<string> = [
+    'English'
+  ];
+
+  countWords: Array<number> = [
+    10,
+    15,
+    20,
+  ];
 
   constructor() { }
 

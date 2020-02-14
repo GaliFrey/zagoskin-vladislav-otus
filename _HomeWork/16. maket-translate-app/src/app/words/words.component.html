@@ -1,13 +1,13 @@
 <mat-card class="card">
   <mat-card-actions>
-    <button mat-raised-button color="accent" (click)="addWord()">Add New</button>
+    <button mat-raised-button color="accent">Add New</button>
   </mat-card-actions>
   <mat-card-content>
     <mat-list>
-      <mat-list-item *ngFor="let word of words">
+      <mat-list-item *ngFor="let word of words" class="item">
         <div class="line">
-          <span>{{word.word}} - {{word.translate}}</span>
-          <button mat-icon-button (click)="deleteWord(word.id)">
+          <span>{{ word.word }} - {{ word.translate }}</span>
+          <button mat-icon-button>
             <mat-icon>delete</mat-icon>
           </button>
         </div>
