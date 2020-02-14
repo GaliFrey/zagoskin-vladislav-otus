@@ -1,0 +1,12 @@
+<h3>Learn English</h3>
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="Recently Added">
+    <app-words [words]="words" (addWordParent)="addWordParent($event)" (deleteWordParent)="deleteWordParent($event)"></app-words>
+  </mat-tab>
+  <mat-tab label="Go">
+    <app-game [word]="words[0]"></app-game>
+  </mat-tab>
+  <mat-tab label="Settings">
+    <app-settings></app-settings>
+  </mat-tab>
+</mat-tab-group>

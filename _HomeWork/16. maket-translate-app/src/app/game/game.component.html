@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <mat-card-content>
+    <p class="wordForTranslate">
+      {{word.word}}
+    </p>
+    <mat-form-field class="inputTranslate">
+      <mat-label>Input translate</mat-label>
+      <input matInput type="text" #translate autocomplete="off">
+      <button mat-button *ngIf="translate.value" matSuffix mat-icon-button aria-label="Clear" (click)="translate.value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="submit">
+      <button mat-raised-button color="primary">Next</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,20 @@
+.card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.wordForTranslate {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+.inputTranslate {
+  width: 100%;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
