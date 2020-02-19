@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "key": "Moscow",
+    "value": "Москва"
+  },
+  {
+    "id": 1,
+    "key": "Kirov",
+    "value": "Киров"
+  },
+  {
+    "id": 2,
+    "key": "Irkutsk",
+    "value": "Иркутск"
+  },
+  {
+    "id": 3,
+    "key": "Sochi",
+    "value": "Сочи"
+  },
+  {
+    "id": 4,
+    "key": "Saint Petersburg",
+    "value": "Санкт-Петербург"
+  },
+  {
+    "id": 5,
+    "key": "Perm",
+    "value": "Пермь"
+  },
+  {
+    "id": 6,
+    "key": "Vladivostok",
+    "value": "Владивосток"
+  }
+]

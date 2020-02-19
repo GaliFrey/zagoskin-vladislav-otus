@@ -1,0 +1,19 @@
+.loaded {
+  color: rgba(0,0,0,0.3);
+
+}
+
+.indicator {
+  display: inline-block;
+  width: 10rem;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button {
+  margin: 0 10px;
+}
