@@ -1,0 +1,25 @@
+<mat-card class="card">
+  <mat-card-content>
+    <h4>Languages:</h4>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let language of languages" [value]="language">
+          {{language}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <h4>Nb. of words:</h4>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let count of countWords" [value]="count">
+          {{count}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Back</button>
+    <button mat-raised-button color="accent">Save</button>
+  </mat-card-actions>
+</mat-card>

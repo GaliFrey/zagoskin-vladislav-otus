@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-card-actions>
+    <button mat-raised-button color="accent">Add New</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let word of words" class="item">
+        <div class="line">
+          <span>{{ word.word }} - {{ word.translate }}</span>
+          <button mat-icon-button>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
