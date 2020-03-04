@@ -1,0 +1,24 @@
+<mat-card class="card">
+  <mat-card-actions>
+    <button (click)="showFormAdd = !showFormAdd" color="accent" mat-raised-button>{{ showFormAdd ? 'Закрыть' : 'Открыть'}}
+      панель добавления слов
+    </button>
+    <button (click)="addWords()" *ngIf="showFormAdd" color="primary" mat-raised-button>Добавить слова</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <mat-form-field *ngIf="showFormAdd" appearance="fill" class="addWord">
+      <mat-label>Каждое слово с новой строки. Пример - "автомобиль"</mat-label>
+      <textarea matInput id="wordList" [disabled]="loader" [(ngModel)]="listWords"></textarea>
+    </mat-form-field>
+    <mat-list *ngIf="!showFormAdd">
+      <mat-list-item *ngFor="let word of words" class="item">
+        <div class="line">
+          <span><b>{{ word.word }}</b> - {{ word.translate.join(", ") }}</span>
+          <button mat-icon-button (click)="deleteWord(word.word)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
