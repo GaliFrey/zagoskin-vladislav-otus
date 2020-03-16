@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-content>
+    <h4>Выберите язык:</h4>
+    <mat-form-field>
+      <mat-select [(value)]="saveLanguage">
+        <mat-option *ngFor="let language of languages" [value]="language">
+          {{language}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <h4>Кол-во слов для изучения:</h4>
+    <mat-form-field>
+      <mat-select [(value)]="saveNumberOfWords">
+        <mat-option *ngFor="let count of numberOfWords" [value]="count">
+          {{count}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" (click)="setSettings()">Сохранить</button>
+  </mat-card-actions>
+</mat-card>
