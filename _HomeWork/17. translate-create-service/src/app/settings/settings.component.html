@@ -2,7 +2,7 @@
   <mat-card-content>
     <h4>Выберите язык:</h4>
     <mat-form-field>
-      <mat-select [(value)]="saveLanguage">
+      <mat-select [(value)]="lang">
         <mat-option *ngFor="let language of languages" [value]="language">
           {{language}}
         </mat-option>
@@ -10,7 +10,7 @@
     </mat-form-field>
     <h4>Кол-во слов для изучения:</h4>
     <mat-form-field>
-      <mat-select [(value)]="saveNumberOfWords">
+      <mat-select [(value)]="nof">
         <mat-option *ngFor="let count of numberOfWords" [value]="count">
           {{count}}
         </mat-option>
