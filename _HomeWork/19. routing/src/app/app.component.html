@@ -1,0 +1,9 @@
+<header>
+  <h3>Учим английские слова</h3>
+  <nav class="nav" mat-stretch-tabs mat-tab-nav-bar>
+    <a #words="routerLinkActive" [active]="words.isActive" mat-tab-link routerLink="/words" routerLinkActive>Список слов</a>
+    <a #game="routerLinkActive" [active]="game.isActive" mat-tab-link routerLink="/game" routerLinkActive>Тренироваться</a>
+    <a #settings="routerLinkActive" [active]="settings.isActive" mat-tab-link routerLink="/settings" routerLinkActive>Настройки</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+.mat-card-actions {
+  padding: 16px;
+  margin: 0;
+}
+
+.mat-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  height: 100%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.addWord {
+  width: 100%;
+}
+
+textarea {
+  height: 200px;
+  max-height: 100%;
+}
